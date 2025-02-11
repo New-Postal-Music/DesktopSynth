@@ -32,6 +32,14 @@ background:#fff;
 let desktop=document.getElementById('desktop')
 let globe=document.getElementById('globe')
 let draw=()=>{
+let width=window.innerWidth
+let height=window.innerHeight
+let cx=width/2
+desktop.viewBox.baseVal.width=width
+desktop.viewBox.baseVal.height=height
+globe.cx.baseVal.value=cx
+globe.cy.baseVal.value=height-22
+globe.r.baseVal.value=28
 }
 window.onload=window.onresize=()=>{
 draw()
